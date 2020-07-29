@@ -1,0 +1,30 @@
+<idea-plugin>
+  <id>com.wyb.requestplugin</id>
+  <name>RequestPlugin</name>
+  <version>1.0</version>
+  <vendor email="975164691@qq.com" url="https://github.com/wybiao/RequestPlugin">wyb</vendor>
+
+  <description>Generate the request class from the fields, automatically completing the implementation of the
+    properties and constructors
+  </description>
+
+  <change-notes>Generate the request class from the fields, automatically completing the implementation of the
+    properties and constructors
+  </change-notes>
+
+  <idea-version since-build="173.0"/>
+
+  <depends>com.intellij.modules.platform</depends>
+  <depends>com.intellij.modules.java</depends>
+  <extensions defaultExtensionNs="com.intellij">
+  </extensions>
+
+  <actions>
+    <action id="RequestCreator.ReqAction" class="action.RequestCreatorAction" text="Generate Request FieldName"
+            description="generate the request class from the fields">
+      <add-to-group group-id="CodeMenu" anchor="last"/>
+      <add-to-group group-id="GenerateGroup" anchor="last"/>
+    </action>
+  </actions>
+
+</idea-plugin>
